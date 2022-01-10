@@ -1,5 +1,4 @@
-﻿
-using Cloud.Common.Logging;
+﻿using Cloud.Common.Logging;
 using System;
 
 namespace Cloud.DAL.Model

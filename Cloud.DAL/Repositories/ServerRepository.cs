@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Cloud.DAL.Repositories
@@ -10,6 +9,7 @@ namespace Cloud.DAL.Repositories
     public class GeneralRepository<T> : IGeneralRepository<T> where T : Entity
     {
         private IList<T> _datastore = new List<T>();
+
         public async Task Create(T item)
         {
             _datastore.Add(item);

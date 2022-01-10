@@ -1,18 +1,15 @@
 ﻿using Cloud.Common.Configurations;
 using Cloud.Logic.DomainModel;
-using Cloud.Logic.Extensions;
 using Cloud.Logic.Factories;
-using System;
 using System.Threading.Tasks;
 
 namespace Cloud.Logic.Services
 {
-    public class LoadBalancerServices : BaseServerServices , ILoadBalancerServices
+    public class LoadBalancerServices : BaseServerServices, ILoadBalancerServices
     {
         private readonly IServerLogger _serverLogger;
         private readonly IStaticConfigurationsReader _staticConfigurationsReader;
-        
-        
+
         public LoadBalancerServices(IServerLogger serverLogger, IStaticConfigurationsReader staticConfigurationsReader)
         {
             _serverLogger = serverLogger;
@@ -42,6 +39,5 @@ namespace Cloud.Logic.Services
                 thread.Register(server);
             }
         }
-
     }
 }

@@ -1,11 +1,6 @@
-﻿using Cloud.Logic.DomainModel;
-using System;
-using System.Threading.Tasks;
-
-namespace Cloud.Logic.Services
+﻿namespace Cloud.Logic.Services
 {
-    public interface IProviderServices: IServerServices
+    public interface IProviderServices : IServerServices
     {
-         
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Cloud.Logic.DomainModel
 {
@@ -16,7 +15,9 @@ namespace Cloud.Logic.DomainModel
         public string IP { get; set; }
         public RateLimiter RateLimiter { get; set; }
         public IList<ServerLog> Logs { get; set; } = new List<ServerLog>();
+
         private bool HasMoreThreads() => _currentThreadsCount < _ThreadPoolCapacity;
+
         public bool GetThread()
         {
             if (!HasMoreThreads())
@@ -32,6 +33,5 @@ namespace Cloud.Logic.DomainModel
         {
             _currentThreadsCount--;
         }
-
     }
 }

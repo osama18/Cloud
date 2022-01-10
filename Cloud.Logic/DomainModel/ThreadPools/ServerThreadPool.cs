@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Cloud.Logic.DomainModel
 {
     public abstract class ServerThreadPool : IDisposable
     {
         private readonly Server _server;
+
         public ServerThreadPool(Server server)
         {
             _server = server;
@@ -22,7 +22,6 @@ namespace Cloud.Logic.DomainModel
             PerformDeepCheck();
 
             return true;
-
         }
 
         public Response Get(Request request)

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Cloud.DAL.Model
 {
@@ -9,6 +8,5 @@ namespace Cloud.DAL.Model
         public string IP { get; set; }
         public RateLimiter RateLimiter { get; set; }
         public IList<ServerLog> Logs { get; set; } = new List<ServerLog>();
-
     }
 }

@@ -1,5 +1,4 @@
 ﻿using Cloud.Logic.DomainModel;
-using System.Threading.Tasks;
 
 namespace Cloud.Logic.DeploymentTools
 {

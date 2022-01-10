@@ -2,6 +2,6 @@
 {
     public enum DynamicRateLimiterType
     {
-       FromRegisteredResource
+        FromRegisteredResource
     }
 }

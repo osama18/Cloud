@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Cloud.Common.DataStrucures
 {
     public class CountMap
     {
         private Dictionary<string, int> _map;
-        const int NumberOfChecksToActivate = 2; // Need to read from config
+        private const int NumberOfChecksToActivate = 2; // Need to read from config
 
         public CountMap()
         {
@@ -24,6 +22,7 @@ namespace Cloud.Common.DataStrucures
             if (_map.ContainsKey(key))
                 _map[key]--;
         }
+
         public void ResetAll()
         {
             foreach (var key in _map.Keys)

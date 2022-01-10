@@ -19,6 +19,7 @@ namespace Cloud.Logic.DomainModel
             RateLimiter = rateLimiter;
             ServerSelectionStrategy = serverSelectionStrategy;
         }
+
         public CountMap InactiveServerTracker { get; set; } = new CountMap();
         public IList<Server> RegisteredActiveServers { get; set; } = new List<Server>();
         public IList<Server> RegisteredInActiveServers { get; set; } = new List<Server>();

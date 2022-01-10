@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-namespace Cloud.Logic.DomainModel
+﻿namespace Cloud.Logic.DomainModel
 {
     public interface IApplication
     {

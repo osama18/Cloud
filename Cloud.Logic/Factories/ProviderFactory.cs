@@ -9,6 +9,7 @@ namespace Cloud.Logic.Factories
     {
         private readonly IDeployer _deployer;
         private readonly IDNS _dns;
+
         public ProviderFactory(IDeployer deployer, IDNS dns)
         {
             _deployer = deployer;
@@ -17,7 +18,7 @@ namespace Cloud.Logic.Factories
 
         public Provider Construct(string name, IApplication application, int threadPoolCapacity, bool isPublicServer = false, DomainModel.RateLimiter rateLimiter = null)
         {
-            var provider = new Provider(name,Guid.NewGuid(), _dns.ReserveIp(name),rateLimiter, threadPoolCapacity);
+            var provider = new Provider(name, Guid.NewGuid(), _dns.ReserveIp(name), rateLimiter, threadPoolCapacity);
 
             _deployer.Deploy(application, provider);
 

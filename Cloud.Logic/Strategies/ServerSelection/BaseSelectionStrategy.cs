@@ -1,6 +1,5 @@
 ﻿using Cloud.Logic.DomainModel;
 using Cloud.Logic.Extensions;
-using System;
 
 namespace Cloud.Logic.Strategies
 {

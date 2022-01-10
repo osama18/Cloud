@@ -1,6 +1,4 @@
-﻿using Cloud.Common.DataStrucures;
-using Cloud.Logic.Factories;
-using System;
+﻿using Cloud.Logic.Factories;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,7 +14,9 @@ namespace Cloud.Logic.DomainModel
             _loadBalancer = loadBalancer;
             _serverSelectionStrategyFactory = serverSelectionStrategyFactory;
         }
+
         private Server GetInActiveServerByIp(string ip) => _loadBalancer.RegisteredInActiveServers.First(s => s.IP == ip);
+
         protected override void PerformDeepCheck()
         {
             //ExcludeInactive
@@ -80,9 +80,9 @@ namespace Cloud.Logic.DomainModel
         {
             var strategy = _serverSelectionStrategyFactory.Construct(_loadBalancer);
 
-            var  server = strategy.Next();
+            var server = strategy.Next();
 
-            using(var thread = ThreadPoolFactory.GetThreadPool(server))
+            using (var thread = ThreadPoolFactory.GetThreadPool(server))
             {
                 return thread.Get(request);
             }

@@ -1,7 +1,4 @@
 ﻿using Cloud.Logic.DomainModel;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Cloud.Logic.Factories
 {
@@ -9,7 +6,8 @@ namespace Cloud.Logic.Factories
     {
         public RateLimiter ConstructDynamic(RateLimitingStrategy rateLimitingStrategy, RateLimitingTechnique rateLimitingTechnique, DynamicRateLimiterType dynamicRateLimiterType)
         {
-            return new DynamicRateLimiter { 
+            return new DynamicRateLimiter
+            {
                 DynamicRateLimiterType = dynamicRateLimiterType,
                 RateLimitingStrategy = rateLimitingStrategy,
                 RateLimitingTechnique = rateLimitingTechnique,
